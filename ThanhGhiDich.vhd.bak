@@ -1,0 +1,57 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;		
+use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.std_logic_arith.all;
+
+
+
+entity ThanhGhiDich is
+	port (
+		CLR : in std_logic; --! Xóa byte nhớ, không đồng bộ
+		CE : in std_logic; --! Cho phép Write
+		CLK : in std_logic; --! Tín hiệu đồng hồ, tích cực sườn lên
+		D : in STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu vào
+		a00 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a01 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a02 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a10 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a11 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a12 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a20 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a21 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		a22 : out STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
+		
+		
+	);
+end entity;
+architecture behavior of ThanhGhiDich is
+	begin
+		process (CLK, CLR) -- Process chỉ thực thi, khi có thay đổi trên CLK, CLR
+			begin
+				if CLR = '1' then -- Nếu tín hiệu xóa CLR=1, thì xóa đầu ra Q về 0
+					a00 <= '0';
+					a01 <= '0';
+					a02 <= '0';
+					a10 <= '0';
+					a11 <= '0';
+					a12 <= '0';
+					a20 <= '0';
+					a21 <= '0';
+					a22 <= '0';
+					
+				elsif rising_edge(CLK) then -- Nếu CLR =0, và tại sườn lên của tín hiệu CLK
+					if CE = '1' then -- Nếu có tín hiệu cho phép Write, thì chốt lại
+						a00 <= D;
+						a01 <= a00;
+						a02 <= a01;
+						a10 <= a02;
+						a11 <= a10;
+						a12 <= a11;
+						a20 <= a12;
+						a21 <= a20;
+						a22 <= a21;
+						
+					end if; -- Các trường hợp còn lại, đầu ra Q không đổi, tức là nhớ.
+				end if;
+		end process;
+	end behavior;
