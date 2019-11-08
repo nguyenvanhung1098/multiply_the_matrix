@@ -21,25 +21,9 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -496 472 -328 488)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SelA/B" (rect 5 0 39 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
 	(rect -496 520 -328 536)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "D[7..0]" (rect 5 0 40 12)(font "Arial" ))
+	(text "D[7..0]" (rect 5 0 39 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect -496 712 -328 728)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SelF[1..0]" (rect 5 0 54 12)(font "Arial" ))
+	(text "SelF[1..0]" (rect 5 0 53 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +55,23 @@ applicable agreement for further details.
 	(input)
 	(rect -496 448 -328 464)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "EnW" (rect 5 0 29 12)(font "Arial" ))
+	(text "EnW" (rect 5 0 28 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -496 472 -328 488)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "SelA/B_" (rect 5 0 44 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -486,8 +486,8 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -304 432 -168 512)
-	(text "Mux2x1" (rect 5 0 42 12)(font "Arial" ))
+	(rect -296 432 -160 512)
+	(text "Control" (rect 5 0 40 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -826,8 +826,12 @@ applicable agreement for further details.
 	(pt 208 688)
 )
 (connector
-	(pt 224 464)
-	(pt -168 464)
+	(pt -304 456)
+	(pt -304 464)
+)
+(connector
+	(pt -304 464)
+	(pt -296 464)
 )
 (connector
 	(pt 176 688)
@@ -835,18 +839,18 @@ applicable agreement for further details.
 )
 (connector
 	(pt 176 480)
-	(pt -168 480)
+	(pt -160 480)
 )
 (connector
-	(pt -304 456)
-	(pt -328 456)
-)
-(connector
-	(pt -304 464)
-	(pt -304 456)
-)
-(connector
-	(pt -304 480)
 	(pt -328 480)
+	(pt -296 480)
+)
+(connector
+	(pt -160 464)
+	(pt 224 464)
+)
+(connector
+	(pt -328 456)
+	(pt -304 456)
 )
 (junction (pt -160 528))
