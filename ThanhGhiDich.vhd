@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;		
-use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.std_logic_unsigned.all;
 use IEEE.std_logic_arith.all;
 
 
@@ -40,7 +40,7 @@ architecture behavior of ThanhGhiDich is
 					q21 <= (others => '0');
 					q22 <= (others => '0');
 					
-				elsif rising_edge(CLK) then -- Nếu CLR =0, và tại sườn lên của tín hiệu CLK
+				elsif rising_edge(CE) then -- Nếu CLR =0, và tại sườn lên của tín hiệu CLK
 					if CE = '1' then -- Nếu có tín hiệu cho phép Write, thì chốt lại
 						a00 := D;
 						a01 := a00;

@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;		
-use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.std_logic_unsigned.all;
 use IEEE.std_logic_arith.all;
 
 
@@ -70,10 +70,10 @@ architecture behavior of ThanhGhiDichB is
 					elsif SelF = ('0','1') then -- chon nhap matran B bang ma tran co san
 								q00 <= CONV_STD_LOGIC_VECTOR(2,8);
 								q01 <= CONV_STD_LOGIC_VECTOR(0,8);
-								q02 <= CONV_STD_LOGIC_VECTOR(-2,8);
+								q02 <= CONV_STD_LOGIC_VECTOR(2,8);
 								q10 <= CONV_STD_LOGIC_VECTOR(3,8);
 								q11 <= CONV_STD_LOGIC_VECTOR(0,8);
-								q12 <= CONV_STD_LOGIC_VECTOR(-3,8);
+								q12 <= CONV_STD_LOGIC_VECTOR(3,8);
 								q20 <= CONV_STD_LOGIC_VECTOR(2,8);
 								q21 <= CONV_STD_LOGIC_VECTOR(0,8);
 								q22 <= CONV_STD_LOGIC_VECTOR(2,8);	

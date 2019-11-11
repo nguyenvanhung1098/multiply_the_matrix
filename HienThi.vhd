@@ -17,12 +17,8 @@ end HienThi;
 architecture behavior of HienThi is
 	begin
 		process (d) -- Process chỉ thực thi, khi có thay đổi trên d
-			variable a,b,c:integer;
 			begin
-					a := conv_integer(d);
-					b := a MOD 10;
-					c := a REM 10;
-					q0 <= CONV_STD_LOGIC_VECTOR(b,4);
-					q1 <= CONV_STD_LOGIC_VECTOR(c,4);	
+					q1(3 downto 0) <= d(3 downto 0);
+					q0(3 downto 0) <= d(7 downto 4);
 		end process;
 end behavior;

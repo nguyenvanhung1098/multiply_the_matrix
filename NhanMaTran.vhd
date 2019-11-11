@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;		
-use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.std_logic_unsigned.all;
 use IEEE.std_logic_arith.all;
 
 entity NhanMaTran is
