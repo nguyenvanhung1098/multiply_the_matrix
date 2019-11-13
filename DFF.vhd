@@ -20,7 +20,7 @@ architecture behavior of DFF is
 			begin
 				if CLR = '1' then -- Nếu tín hiệu xóa CLR=1, thì xóa đầu ra Q về 0
 					Q <= '0';
-				elsif rising_edge(CLK) then -- Nếu CLR =0, và tại sườn lên của tín hiệu CLK
+				elsif (clk'event and clk = '1') then -- Nếu CLR =0, và tại sườn lên của tín hiệu CLK
 					if CE = '1' then -- Nếu có tín hiệu cho phép Write, thì chốt lại
 						Q <= D;
 					end if; -- Các trường hợp còn lại, đầu ra Q không đổi, tức là nhớ.

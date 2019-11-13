@@ -25,7 +25,7 @@ entity Mux8x1 is
 end entity;
 architecture behavior of Mux8x1 is
 	begin
-		process (clk) -- Process chỉ thực thi, khi có thay đổi trên a
+		process (clk,a) -- Process chỉ thực thi, khi có thay đổi trên a
 			begin
 				if(rising_edge(clk)) then
 					case a is

@@ -17,9 +17,9 @@ entity Mux2x1 is
 end entity;
 architecture behavior of Mux2x1 is
 	begin
-		process (clk) -- Process chỉ thực thi, khi có thay đổi trên SelF, EnW
+		process (A,B) -- Process chỉ thực thi, khi có thay đổi trên SelF, EnW
 			begin
-				if(rising_edge(clk)) then
+				if (rising_edge(clk)) then
 					if EnW = '1' then -- neu tin hieu cho phep ghi bang 1 thi
 						if SelF = '1' then -- chon A
 							Q <= A;
