@@ -1,0 +1,10 @@
+SW0 - SW7 : nhap lieu
+SW9 SW8:  - 0 0 : Khong cho phep nhap
+	  - 1 0 : Nhap ma tran B
+	  - 1 1 : Nhap ma tran A
+SW11 SW10: - 0 0: nhap lieu bang SW0 - SW7
+	   - 0 1: nhap vao ma tran B ma tran De cho
+	   - 1 0: Nhap vao ma tran B ma tran Tu do co san
+SW15 - Sw12: chon hien thi tung phan tu cua ma tran ket qua
+SW17: Clear
+Key0: tao xung clock
