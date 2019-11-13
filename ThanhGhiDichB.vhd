@@ -57,9 +57,9 @@ architecture behavior of ThanhGhiDichB is
 							end if;
 							
 					elsif SelF = ('0','1') then -- chon nhap matran B bang ma tran co san
-								q00 <= CONV_STD_LOGIC_VECTOR(-1,8);
+								q00 <= CONV_STD_LOGIC_VECTOR(2,8);
 								q01 <= CONV_STD_LOGIC_VECTOR(0,8);
-								q02 <= CONV_STD_LOGIC_VECTOR(0,8);
+								q02 <= CONV_STD_LOGIC_VECTOR(-2,8);
 								q10 <= CONV_STD_LOGIC_VECTOR(3,8);
 								q11 <= CONV_STD_LOGIC_VECTOR(0,8);
 								q12 <= CONV_STD_LOGIC_VECTOR(-3,8);

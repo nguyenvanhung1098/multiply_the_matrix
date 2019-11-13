@@ -8,7 +8,6 @@ entity Mux8x1 is
 		
 		a : in STD_LOGIC_VECTOR(3 downto 0); --tin hieu chon	
 		Q : out STD_LOGIC_VECTOR(7 downto 0);
-		clk : in std_LOGIC;
 		
 		d00 : in STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
 		d01 : in STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu đầu ra
@@ -25,9 +24,8 @@ entity Mux8x1 is
 end entity;
 architecture behavior of Mux8x1 is
 	begin
-		process (clk,a) -- Process chỉ thực thi, khi có thay đổi trên a
+		process (a) -- Process chỉ thực thi, khi có thay đổi trên a
 			begin
-				if(rising_edge(clk)) then
 					case a is
 						when "0000" => Q <= d00;
 						when "0001" => Q <= d01;
@@ -40,6 +38,5 @@ architecture behavior of Mux8x1 is
 						when "1000" => Q <= d22;
 						when others => Q <= d00;
 					end case;
-				end if;
 		end process;
 	end behavior;
