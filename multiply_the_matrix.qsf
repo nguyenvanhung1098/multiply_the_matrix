@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV GX"
 set_global_assignment -name DEVICE EP4CGX150DF31C7
-set_global_assignment -name TOP_LEVEL_ENTITY NhanMaTran
+set_global_assignment -name TOP_LEVEL_ENTITY FullDesign
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:52:52  NOVEMBER 06, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 12.1
@@ -48,7 +48,78 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name VHDL_FILE NhanMaTran.vhd
+set_global_assignment -name VHDL_FILE DFF.vhd
+set_global_assignment -name BDF_FILE REG.bdf
+set_global_assignment -name BDF_FILE FullDesign.bdf
+set_global_assignment -name VHDL_FILE ThanhGhiDich.vhd
+set_global_assignment -name VHDL_FILE ThanhGhiDichB.vhd
+set_global_assignment -name VHDL_FILE Mux2x1.vhd
+set_global_assignment -name VHDL_FILE Control.vhd
+set_global_assignment -name VHDL_FILE decoder7seg.vhd
+set_global_assignment -name VHDL_FILE HienThi.vhd
+set_global_assignment -name VHDL_FILE Mux8x1.vhd
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_E15 -to H0_0
+set_location_assignment PIN_E12 -to H0_1
+set_location_assignment PIN_G11 -to H0_2
+set_location_assignment PIN_F11 -to H0_3
+set_location_assignment PIN_F16 -to H0_4
+set_location_assignment PIN_D16 -to H0_5
+set_location_assignment PIN_F14 -to H0_6
+set_location_assignment PIN_G14 -to H1_0
+set_location_assignment PIN_B13 -to H1_1
+set_location_assignment PIN_G13 -to H1_2
+set_location_assignment PIN_F12 -to H1_3
+set_location_assignment PIN_G12 -to H1_4
+set_location_assignment PIN_J9 -to H1_5
+set_location_assignment PIN_G10 -to H1_6
+set_location_assignment PIN_R30 -to D[7]
+set_location_assignment PIN_T28 -to D[6]
+set_location_assignment PIN_U21 -to D[5]
+set_location_assignment PIN_AB30 -to D[4]
+set_location_assignment PIN_C2 -to D[3]
+set_location_assignment PIN_V21 -to D[2]
+set_location_assignment PIN_U30 -to D[1]
+set_location_assignment PIN_V28 -to D[0]
+set_location_assignment PIN_P30 -to SelA/B_
+set_location_assignment PIN_R29 -to EnW
+set_location_assignment PIN_R26 -to SelF[0]
+set_location_assignment PIN_N26 -to SelF[1]
+set_location_assignment PIN_K25 -to select[3]
+set_location_assignment PIN_J26 -to select[2]
+set_location_assignment PIN_N25 -to select[1]
+set_location_assignment PIN_M26 -to select[0]
+set_location_assignment PIN_AA26 -to CLK
+set_location_assignment PIN_H25 -to CLR
+set_location_assignment PIN_A14 -to H4_0
+set_location_assignment PIN_A13 -to H4_1
+set_location_assignment PIN_C7 -to H4_2
+set_location_assignment PIN_C6 -to H4_3
+set_location_assignment PIN_C5 -to H4_4
+set_location_assignment PIN_C4 -to H4_5
+set_location_assignment PIN_C3 -to H4_6
+set_location_assignment PIN_D3 -to H5_0
+set_location_assignment PIN_A10 -to H5_1
+set_location_assignment PIN_A9 -to H5_2
+set_location_assignment PIN_A7 -to H5_3
+set_location_assignment PIN_A6 -to H5_4
+set_location_assignment PIN_A11 -to H5_5
+set_location_assignment PIN_B6 -to H5_6
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_B9 -to H6_0
+set_location_assignment PIN_B10 -to H6_1
+set_location_assignment PIN_C8 -to H6_2
+set_location_assignment PIN_C9 -to H6_3
+set_location_assignment PIN_D8 -to H6_4
+set_location_assignment PIN_D9 -to H6_5
+set_location_assignment PIN_E9 -to H6_6
+set_location_assignment PIN_E10 -to H7_0
+set_location_assignment PIN_F8 -to H7_1
+set_location_assignment PIN_F9 -to H7_2
+set_location_assignment PIN_C10 -to H7_3
+set_location_assignment PIN_C11 -to H7_4
+set_location_assignment PIN_C12 -to H7_5
+set_location_assignment PIN_D12 -to H7_6
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

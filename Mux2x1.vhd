@@ -7,7 +7,6 @@ use IEEE.std_logic_arith.all;
 
 entity Mux2x1 is
 	port (
-		CLK : in std_logic;
 		EnW : in std_logic; --! Xóa byte nhớ, không đồng bộ
 		SelF: in std_logic; --! Cho phép Write
 		A : in STD_LOGIC_VECTOR(7 downto 0); --! Byte dữ liệu vào
@@ -19,14 +18,12 @@ architecture behavior of Mux2x1 is
 	begin
 		process (A,B) -- Process chỉ thực thi, khi có thay đổi trên SelF, EnW
 			begin
-				if (rising_edge(clk)) then
 					if EnW = '1' then -- neu tin hieu cho phep ghi bang 1 thi
 						if SelF = '1' then -- chon A
 							Q <= A;
 						elsif SelF = '0' then
 							Q <= B;
 						end if;
-					end if;
-				end if;
+					end if;		
 		end process;
 end behavior;
