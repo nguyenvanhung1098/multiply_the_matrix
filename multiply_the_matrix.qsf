@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV GX"
 set_global_assignment -name DEVICE EP4CGX150DF31C7
-set_global_assignment -name TOP_LEVEL_ENTITY FullDesign
+set_global_assignment -name TOP_LEVEL_ENTITY Mux9x1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:52:52  NOVEMBER 06, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 12.1
@@ -51,13 +51,9 @@ set_global_assignment -name VHDL_FILE NhanMaTran.vhd
 set_global_assignment -name VHDL_FILE DFF.vhd
 set_global_assignment -name BDF_FILE REG.bdf
 set_global_assignment -name BDF_FILE FullDesign.bdf
-set_global_assignment -name VHDL_FILE ThanhGhiDich.vhd
-set_global_assignment -name VHDL_FILE ThanhGhiDichB.vhd
 set_global_assignment -name VHDL_FILE Mux2x1.vhd
 set_global_assignment -name VHDL_FILE Control.vhd
 set_global_assignment -name VHDL_FILE decoder7seg.vhd
-set_global_assignment -name VHDL_FILE HienThi.vhd
-set_global_assignment -name VHDL_FILE Mux8x1.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_E15 -to H0_0
 set_location_assignment PIN_E12 -to H0_1
@@ -119,6 +115,9 @@ set_location_assignment PIN_C10 -to H7_3
 set_location_assignment PIN_C11 -to H7_4
 set_location_assignment PIN_C12 -to H7_5
 set_location_assignment PIN_D12 -to H7_6
+set_global_assignment -name VHDL_FILE Mux9x1.vhd
+set_global_assignment -name VHDL_FILE MaTranA.vhd
+set_global_assignment -name VHDL_FILE MaTranB.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
